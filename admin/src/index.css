@@ -1,0 +1,100 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        @apply bg-luxe-black text-luxe-text font-body antialiased;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4 {
+        @apply font-display;
+    }
+
+    ::-webkit-scrollbar {
+        width: 5px;
+    }
+
+    ::-webkit-scrollbar-track {
+        background: #0B0B0D;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: #2A2A35;
+        border-radius: 3px;
+    }
+
+    ::selection {
+        background: rgba(212, 175, 55, 0.3);
+    }
+
+    /* Hide number input spinners */
+    input[type="number"]::-webkit-outer-spin-button,
+    input[type="number"]::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+    input[type="number"] {
+        -moz-appearance: textfield;
+    }
+
+    textarea {
+        resize: none;
+    }
+}
+
+@layer components {
+    .btn-gold {
+        @apply bg-luxe-gold text-luxe-black font-semibold px-5 py-2.5 rounded-lg hover:bg-luxe-gold-hover transition-all duration-300 disabled:opacity-50 text-sm;
+    }
+
+    .btn-outline {
+        @apply border border-luxe-border text-luxe-muted px-5 py-2.5 rounded-lg hover:border-luxe-gold hover:text-luxe-gold transition-all duration-200 text-sm;
+    }
+
+    .btn-danger {
+        @apply bg-luxe-error/10 text-luxe-error px-5 py-2.5 rounded-lg hover:bg-luxe-error/20 transition-all text-sm;
+    }
+
+    .input-admin {
+        @apply w-full bg-luxe-card border border-luxe-border rounded-lg px-3.5 py-2.5 text-luxe-text text-sm placeholder:text-luxe-muted/40 focus:outline-none focus:border-luxe-gold focus:ring-1 focus:ring-luxe-gold/30 transition-all;
+    }
+
+    .card-admin {
+        @apply bg-luxe-surface border border-luxe-border rounded-xl p-5;
+    }
+
+    .badge-status {
+        @apply text-xs font-medium px-2.5 py-1 rounded-full inline-flex items-center;
+    }
+
+    .table-admin {
+        @apply w-full text-sm text-left;
+    }
+
+    .table-admin thead {
+        @apply text-xs uppercase tracking-wider text-luxe-muted border-b border-luxe-border;
+    }
+
+    .table-admin th {
+        @apply px-4 py-3 font-medium;
+    }
+
+    .table-admin td {
+        @apply px-4 py-3 border-b border-luxe-border/50;
+    }
+
+    .table-admin tbody tr {
+        @apply hover:bg-luxe-card/50 transition-colors;
+    }
+}

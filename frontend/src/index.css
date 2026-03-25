@@ -1,0 +1,130 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    @apply bg-luxe-black text-luxe-text font-body antialiased;
+    overflow-x: hidden;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-display;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #0B0B0D;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #2A2A35;
+    border-radius: 3px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #d6b068;
+  }
+
+  ::selection {
+    background: rgba(212, 175, 55, 0.3);
+    color: #F5F5F5;
+  }
+
+  /* Hide number input spinners */
+  input[type="number"]::-webkit-outer-spin-button,
+  input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  input[type="number"] {
+    -moz-appearance: textfield;
+  }
+
+  textarea {
+    resize: none;
+  }
+}
+
+@layer components {
+  .btn-gold {
+    @apply bg-luxe-gold text-luxe-black font-semibold px-6 py-3 rounded-lg hover:bg-luxe-gold-hover transition-all duration-300 active:scale-[0.97] disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  .btn-outline {
+    @apply border border-luxe-gold text-luxe-gold px-6 py-3 rounded-lg hover:bg-luxe-gold hover:text-luxe-black transition-all duration-300 active:scale-[0.97];
+  }
+
+  .btn-ghost {
+    @apply text-luxe-muted hover:text-luxe-gold px-4 py-2 rounded-lg transition-all duration-200;
+  }
+
+  .input-luxe {
+    @apply w-full bg-luxe-surface border border-luxe-border rounded-lg px-4 py-3 text-luxe-text placeholder:text-luxe-muted/50 focus:outline-none focus:border-luxe-gold focus:ring-1 focus:ring-luxe-gold/30 transition-all duration-200;
+  }
+
+  .card-luxe {
+    @apply bg-luxe-surface border border-luxe-border rounded-xl p-6 hover:border-luxe-gold/30 transition-all duration-300;
+  }
+
+  .badge-gold {
+    @apply bg-luxe-gold/10 text-luxe-gold text-xs font-medium px-2.5 py-1 rounded-full;
+  }
+
+  .gold-glow {
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.15), 0 0 60px rgba(212, 175, 55, 0.05);
+  }
+
+  .skeleton {
+    @apply bg-luxe-border/50 animate-pulse rounded;
+  }
+
+  .page-container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8;
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.animate-fade-up {
+  animation: fadeUp 0.6s ease-out forwards;
+}
+
+.animate-shimmer {
+  background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.05), transparent);
+  background-size: 200% 100%;
+  animation: shimmer 2s infinite;
+}
