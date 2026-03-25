@@ -6,6 +6,50 @@ const validate = require('../middleware/validate');
 const { requireAuth } = require('../middleware/auth');
 const { authLimiter } = require('../middleware/rateLimiter');
 
+// GET /api/auth/setup-status — check if initial setup is needed
+router.get('/setup-status', async (req, res, next) => {
+    try {
+        const adminCount = await User.countDocuments({ role: 'admin' });
+        res.json({ needsSetup: adminCount === 0 });
+    } catch (error) {
+        next(error);
+    }
+});
+
+// POST /api/auth/setup — create first admin (only works when no admin exists)
+router.post('/setup', async (req, res, next) => {
+    try {
+        const adminCount = await User.countDocuments({ role: 'admin' });
+        if (adminCount > 0) {
+            return res.status(403).json({ message: 'Setup already completed' });
+        }
+
+        const { fullName, email, password } = req.body;
+
+        if (!fullName || fullName.length < 2) {
+            return res.status(400).json({ message: 'Full name must be at least 2 characters' });
+        }
+        if (!email || !/\S+@\S+\.\S+/.test(email)) {
+            return res.status(400).json({ message: 'Valid email is required' });
+        }
+        if (!password || password.length < 6) {
+            return res.status(400).json({ message: 'Password must be at least 6 characters' });
+        }
+
+        const admin = new User({
+            fullName,
+            email,
+            passwordHash: password,
+            role: 'admin'
+        });
+        await admin.save();
+
+        res.status(201).json({ message: 'Admin account created successfully' });
+    } catch (error) {
+        next(error);
+    }
+});
+
 const registerSchema = z.object({
     fullName: z.string().min(2, 'Name must be at least 2 characters'),
     email: z.string().email('Invalid email'),

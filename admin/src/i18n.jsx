@@ -62,6 +62,10 @@ const translations = {
 
         // Login
         signIn: 'Sign In', signingIn: 'Signing in...', adminAccessRequired: 'Admin access required',
+        initialSetup: 'Initial Setup', createFirstAdmin: 'Create your admin account to get started',
+        retypePassword: 'Retype Password', passwordsDoNotMatch: 'Passwords do not match',
+        passwordMinLength: 'Password must be at least 6 characters',
+        createAdmin: 'Create Admin Account', creating: 'Creating...', setupSuccess: 'Admin account created! Please sign in.',
 
         // Common
         delete: 'Delete', edit: 'Edit', confirm: 'Confirm', success: 'Success',
@@ -118,6 +122,10 @@ const translations = {
         percent: 'Faiz (%)', fixed: 'Sabit ($)', never: 'Heç vaxt',
 
         signIn: 'Daxil Ol', signingIn: 'Daxil olunur...', adminAccessRequired: 'Admin girişi tələb olunur',
+        initialSetup: 'İlk Quraşdırma', createFirstAdmin: 'Başlamaq üçün admin hesabı yaradın',
+        retypePassword: 'Şifrəni Təkrarlayın', passwordsDoNotMatch: 'Şifrələr uyğun gəlmir',
+        passwordMinLength: 'Şifrə ən azı 6 simvol olmalıdır',
+        createAdmin: 'Admin Hesabı Yarat', creating: 'Yaradılır...', setupSuccess: 'Admin hesabı yaradıldı! Zəhmət olmasa daxil olun.',
 
         delete: 'Sil', edit: 'Redaktə', confirm: 'Təsdiqlə', success: 'Uğurlu',
         failed: 'Uğursuz', created: 'Yaradıldı', updated: 'Yeniləndi', deleted: 'Silindi',
@@ -173,6 +181,10 @@ const translations = {
         percent: 'Процент (%)', fixed: 'Фиксир. ($)', never: 'Никогда',
 
         signIn: 'Войти', signingIn: 'Вход...', adminAccessRequired: 'Требуется доступ администратора',
+        initialSetup: 'Начальная Настройка', createFirstAdmin: 'Создайте учётную запись администратора',
+        retypePassword: 'Повторите Пароль', passwordsDoNotMatch: 'Пароли не совпадают',
+        passwordMinLength: 'Пароль должен содержать не менее 6 символов',
+        createAdmin: 'Создать Аккаунт Админа', creating: 'Создание...', setupSuccess: 'Аккаунт админа создан! Пожалуйста, войдите.',
 
         delete: 'Удалить', edit: 'Редактировать', confirm: 'Подтвердить', success: 'Успешно',
         failed: 'Ошибка', created: 'Создано', updated: 'Обновлено', deleted: 'Удалено',
