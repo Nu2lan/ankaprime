@@ -40,8 +40,8 @@ export default function Layout() {
                 {/* Header */}
                 <div className="h-14 px-4 flex items-center justify-between border-b border-luxe-border">
                     {!collapsed && (
-                        <div className="overflow-hidden">
-                            <h1 className="text-xl font-display font-bold text-luxe-gold tracking-wider leading-none">LUXE</h1>
+                        <div className="overflow-hidden flex flex-col">
+                            <img src="/logo.png" alt="AnkaPrime Logo" className="h-6 object-contain self-start" />
                             <p className="text-[10px] text-luxe-muted tracking-[0.15em] uppercase mt-0.5">{t('adminPanel')}</p>
                         </div>
                     )}
@@ -90,8 +90,8 @@ export default function Layout() {
                     <div className="absolute inset-0 bg-black/60" onClick={() => setSidebarOpen(false)} />
                     <aside className="absolute left-0 inset-y-0 w-60 bg-luxe-surface border-r border-luxe-border flex flex-col">
                         <div className="h-14 px-5 flex items-center justify-between border-b border-luxe-border">
-                            <div>
-                                <h1 className="text-xl font-display font-bold text-luxe-gold tracking-wider leading-none">LUXE</h1>
+                            <div className="flex flex-col">
+                                <img src="/logo.png" alt="AnkaPrime Logo" className="h-6 object-contain self-start" />
                                 <p className="text-[10px] text-luxe-muted tracking-[0.15em] uppercase mt-0.5">{t('adminPanel')}</p>
                             </div>
                             <button onClick={() => setSidebarOpen(false)} className="text-luxe-muted hover:text-luxe-gold">

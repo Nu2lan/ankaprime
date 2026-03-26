@@ -66,8 +66,8 @@ export default function SetupPage({ onSetupComplete }) {
                 </div>
             </div>
             <div className="w-full max-w-sm">
-                <div className="text-center mb-8">
-                    <h1 className="text-3xl font-display font-bold text-luxe-gold tracking-wider">ANKAPRIME</h1>
+                <div className="text-center mb-8 flex flex-col items-center">
+                    <img src="/logo.png" alt="AnkaPrime Logo" className="h-10 mb-2" />
                     <p className="text-luxe-muted text-sm mt-1">{t('initialSetup')}</p>
                     <p className="text-luxe-muted text-xs mt-1">{t('createFirstAdmin')}</p>
                 </div>
