@@ -194,7 +194,7 @@ const translations = {
 const LangCtx = createContext()
 
 export function LangProvider({ children }) {
-    const [lang, setLangState] = useState(() => localStorage.getItem('adminLang') || 'en')
+    const [lang, setLangState] = useState(() => localStorage.getItem('adminLang') || 'az')
 
     const setLang = (l) => { setLangState(l); localStorage.setItem('adminLang', l) }
     const t = (key) => translations[lang]?.[key] || translations.en[key] || key
