@@ -126,12 +126,12 @@ export default function ProductForm() {
                 <div className="card-admin space-y-4">
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                         <div><label className="block text-xs text-luxe-muted mb-1">{t('stock')}</label><input name="stock" type="number" value={form.stock} onChange={handleChange} className="input-admin w-full" /></div>
-                    </div>
-                    <div><label className="block text-xs text-luxe-muted mb-1">{t('category')} *</label>
-                        <select name="categoryId" value={form.categoryId} onChange={handleChange} className="input-admin w-full" required>
-                            <option value="">{t('selectCategory')}</option>
-                            {categories.map(c => <option key={c._id} value={c._id}>{getCatName(c)}</option>)}
-                        </select>
+                        <div><label className="block text-xs text-luxe-muted mb-1">{t('category')} *</label>
+                            <select name="categoryId" value={form.categoryId} onChange={handleChange} className="input-admin w-full" required>
+                                <option value="">{t('selectCategory')}</option>
+                                {categories.map(c => <option key={c._id} value={c._id}>{getCatName(c)}</option>)}
+                            </select>
+                        </div>
                     </div>
                 </div>
 
