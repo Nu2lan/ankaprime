@@ -43,7 +43,7 @@ export default function Layout() {
                         <div className="overflow-hidden flex flex-col">
                             <div className="flex items-center gap-2">
                                 <img src="/logo.png" alt="AnkaPrime Logo" className="h-6 object-contain" />
-                                <span className="text-[1.1rem] font-display font-bold text-luxe-gold tracking-wider leading-none truncate w-full">Anka Prime</span>
+                                <span className="text-[1.1rem] font-display font-bold text-luxe-gold tracking-wider leading-none truncate w-full">ANKA PRIME</span>
                             </div>
                             <p className="text-[10px] text-luxe-muted tracking-[0.15em] uppercase mt-1">{t('adminPanel')}</p>
                         </div>
