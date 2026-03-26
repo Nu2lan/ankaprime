@@ -41,8 +41,11 @@ export default function Layout() {
                 <div className="h-14 px-4 flex items-center justify-between border-b border-luxe-border">
                     {!collapsed && (
                         <div className="overflow-hidden flex flex-col">
-                            <img src="/logo.png" alt="AnkaPrime Logo" className="h-6 object-contain self-start" />
-                            <p className="text-[10px] text-luxe-muted tracking-[0.15em] uppercase mt-0.5">{t('adminPanel')}</p>
+                            <div className="flex items-center gap-2">
+                                <img src="/logo.png" alt="AnkaPrime Logo" className="h-6 object-contain" />
+                                <span className="text-[1.1rem] font-display font-bold text-luxe-gold tracking-wider leading-none truncate w-full">Anka Prime</span>
+                            </div>
+                            <p className="text-[10px] text-luxe-muted tracking-[0.15em] uppercase mt-1">{t('adminPanel')}</p>
                         </div>
                     )}
                     <button
@@ -91,8 +94,11 @@ export default function Layout() {
                     <aside className="absolute left-0 inset-y-0 w-60 bg-luxe-surface border-r border-luxe-border flex flex-col">
                         <div className="h-14 px-5 flex items-center justify-between border-b border-luxe-border">
                             <div className="flex flex-col">
-                                <img src="/logo.png" alt="AnkaPrime Logo" className="h-6 object-contain self-start" />
-                                <p className="text-[10px] text-luxe-muted tracking-[0.15em] uppercase mt-0.5">{t('adminPanel')}</p>
+                                <div className="flex items-center gap-2">
+                                    <img src="/logo.png" alt="AnkaPrime Logo" className="h-6 object-contain" />
+                                    <span className="text-[1.1rem] font-display font-bold text-luxe-gold tracking-wider leading-none">Anka Prime</span>
+                                </div>
+                                <p className="text-[10px] text-luxe-muted tracking-[0.15em] uppercase mt-1">{t('adminPanel')}</p>
                             </div>
                             <button onClick={() => setSidebarOpen(false)} className="text-luxe-muted hover:text-luxe-gold">
                                 <HiOutlineX className="w-5 h-5" />

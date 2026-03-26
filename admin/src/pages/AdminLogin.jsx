@@ -58,7 +58,10 @@ export default function AdminLogin() {
             </div>
             <div className="w-full max-w-sm">
                 <div className="text-center mb-8 flex flex-col items-center">
-                    <img src="/logo.png" alt="AnkaPrime Logo" className="h-10 mb-2" />
+                    <div className="flex items-center justify-center gap-3 mb-2">
+                        <img src="/logo.png" alt="AnkaPrime Logo" className="h-10 object-contain" />
+                        <h1 className="text-3xl font-display font-bold text-luxe-gold tracking-wider">Anka Prime</h1>
+                    </div>
                     <p className="text-luxe-muted text-sm mt-1">{t('adminPanel')}</p>
                 </div>
                 <form onSubmit={handleSubmit} className="card-admin space-y-4">
